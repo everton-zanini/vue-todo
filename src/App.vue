@@ -7,12 +7,12 @@
         dark
         class="pt-5 text-center"
       >
-        <v-avatar size="100">
+        <!-- <v-avatar size="100">
           <img
             src="https://avatars.githubusercontent.com/u/107217906?s=400&u=678b879732323ca549a102dca3cc7bacc3d23059&v=4"
             alt="Zanini"
           />
-        </v-avatar>
+        </v-avatar> -->
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title class="text-h6"> Vue.js </v-list-item-title>

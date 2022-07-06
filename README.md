@@ -1,4 +1,16 @@
-# todo
+# Tarefas To Do
+
+## Sobre
+Projeto de conclusão do curso de Vue2 utilizando:
+-Vuex
+-Vuetify
+-Router
+-CRUD no localbase
+-Animated.css
+
+## Contato
+- everton.zanini@yahoo.com
+- https://www.linkedin.com/in/everton-zanini-8bb43917a/
 
 ## Project setup
 ```
