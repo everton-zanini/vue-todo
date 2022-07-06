@@ -35,10 +35,13 @@ export default {
   },
   methods: {
     handleTarefa() {
-        this.$store.commit('adicionaTarefa',this.inputTarefa);
+        this.$store.dispatch('adicionaTarefa',this.inputTarefa);
         this.inputTarefa = null;
       
     },
   },
+  created(){
+    this.$store.commit('buscarTarefas')
+  }
 };
 </script>
