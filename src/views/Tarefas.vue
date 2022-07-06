@@ -1,22 +1,22 @@
 <template>
   <div>
-    <v-col cols="12">
-      <v-text-field
-        v-model="inputTarefa"
-        label="Qual a sua tarefa?"
-        @keyup.enter="handleTarefa"
-        outlined
-        clearable
-      ></v-text-field>
-    </v-col>
-
-    <v-list flat subheader>
-      <v-list-item-group multiple active-class="">
+    <v-list flat subheader >
+      <v-list-item-group >
         <div v-for="(tarefa, index) in $store.state.tarefas" :key="index">
           <Tarefa :tarefa="tarefa" />
         </div>
       </v-list-item-group>
     </v-list>
+    <div class="mt-16 animate__bounceIn" v-if="!$store.state.tarefas.length">
+      <center>
+        <v-icon size="100" color="primary">mdi-check</v-icon>
+        <div
+          class="text-h5 primary--text"
+        >
+          Nenhuma tarefa
+        </div>
+      </center>
+    </div>
   </div>
 </template>
 
@@ -28,20 +28,8 @@ export default {
   components: {
     Tarefa,
   },
-  data() {
-    return {
-      inputTarefa: "",
-    };
+  created() {
+    this.$store.commit("buscarTarefas");
   },
-  methods: {
-    handleTarefa() {
-        this.$store.dispatch('adicionaTarefa',this.inputTarefa);
-        this.inputTarefa = null;
-      
-    },
-  },
-  created(){
-    this.$store.commit('buscarTarefas')
-  }
 };
 </script>

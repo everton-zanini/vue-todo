@@ -7,13 +7,9 @@
       <template v-slot:item="{ item, reorder }">
         <drag :key="item.id" :data="item">
           <Tarefa
-            :tarefa="item"
             style="background-color: white"
-            :style="
-              reorder
-                ? { borderLeft: '2px solid #1976D2', marginLeft: '-2px' }
-                : {}
-            "
+            :style="reorder ? { borderLeft: '2px solid #1976D2', marginLeft: '-2px' } : {} "
+            :tarefa="item"
           />
           <v-divider />
         </drag>
@@ -23,13 +19,12 @@
 </template>
 
 <script>
-import { Drag, Drop, DropList } from "vue-easy-dnd";
+import { Drag, DropList } from "vue-easy-dnd";
 import Tarefa from "./Tarefa.vue";
 export default {
   components: {
     Drag,
     DropList,
-    Drop,
     Tarefa,
   },
   computed: {

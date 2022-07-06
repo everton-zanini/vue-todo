@@ -25,6 +25,7 @@
 </template>
 
 <script>
+
 import TarefaMenu from '../components/TarefaMenu'
 export default {
     props:['tarefa'],
