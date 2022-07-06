@@ -2,11 +2,11 @@
 
 ## Sobre
 Projeto de conclusão do curso de Vue2 utilizando:
--Vuex
--Vuetify
--Router
--CRUD no localbase
--Animated.css
+- Vuex
+- Vuetify
+- Router
+- CRUD no localbase
+- Animated.css
 
 ## Contato
 - everton.zanini@yahoo.com
